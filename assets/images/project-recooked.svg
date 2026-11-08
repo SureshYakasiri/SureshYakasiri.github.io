@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0d12"/>
+      <stop offset="50%" stop-color="#10151f"/>
+      <stop offset="100%" stop-color="#06080b"/>
+    </linearGradient>
+    <linearGradient id="neonGreenGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00ff66"/>
+      <stop offset="100%" stop-color="#00d050"/>
+    </linearGradient>
+    <linearGradient id="glowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00ff66" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#00ff66" stop-opacity="0"/>
+    </linearGradient>
+    <!-- Grid Pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1d2636" stroke-width="0.8"/>
+      <circle cx="0" cy="0" r="1.5" fill="#00ff66" opacity="0.3"/>
+    </pattern>
+    <!-- Dot Pattern -->
+    <pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#2d3b52" opacity="0.4"/>
+    </pattern>
+    <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background Layer -->
+  <rect width="800" height="450" fill="url(#bgGrad)"/>
+  <rect width="800" height="450" fill="url(#grid)" opacity="0.6"/>
+  <rect width="800" height="450" fill="url(#dots)" opacity="0.3"/>
+
+  <!-- Circuit Trace Accents -->
+  <path d="M 0 60 L 120 60 L 160 100 L 320 100" fill="none" stroke="#00ff66" stroke-width="1.5" opacity="0.4"/>
+  <circle cx="320" cy="100" r="3" fill="#00ff66" opacity="0.7"/>
+  <path d="M 800 390 L 680 390 L 640 350 L 520 350" fill="none" stroke="#00ff66" stroke-width="1.5" opacity="0.4"/>
+  <circle cx="520" cy="350" r="3" fill="#00ff66" opacity="0.7"/>
+
+  <!-- Blueprint Outer Frame -->
+  <rect x="25" y="25" width="750" height="400" rx="6" fill="none" stroke="#223046" stroke-width="1.5"/>
+  <rect x="23" y="23" width="12" height="12" fill="none" stroke="#00ff66" stroke-width="2"/>
+  <rect x="765" y="23" width="12" height="12" fill="none" stroke="#00ff66" stroke-width="2"/>
+  <rect x="23" y="415" width="12" height="12" fill="none" stroke="#00ff66" stroke-width="2"/>
+  <rect x="765" y="415" width="12" height="12" fill="none" stroke="#00ff66" stroke-width="2"/>
+
+  <!-- Header HUD Tag -->
+  <rect x="40" y="40" width="180" height="24" rx="3" fill="#131c28" stroke="#00ff66" stroke-width="1"/>
+  <circle cx="54" cy="52" r="4" fill="#00ff66" filter="url(#neonGlow)"/>
+  <text x="68" y="56" fill="#00ff66" font-family="'JetBrains Mono', 'Fira Code', monospace" font-size="11" font-weight="700" letter-spacing="1.5">GDD SPEC // PRJ-01</text>
+
+  <rect x="620" y="40" width="140" height="24" rx="3" fill="#131c28" stroke="#27384e" stroke-width="1"/>
+  <text x="690" y="56" text-anchor="middle" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="10" letter-spacing="1">BYOG 2025 // WEB</text>
+
+  <!-- Central Visual: Isometric Kitchen Greybox & Order Sequence Node Graph -->
+  <g transform="translate(140, 110)">
+    <!-- Isometric Workstation Island Wireframe -->
+    <polygon points="260,30 460,110 260,190 60,110" fill="#131d2a" stroke="#00ff66" stroke-width="1.8" filter="url(#neonGlow)" opacity="0.85"/>
+    <polygon points="60,110 260,190 260,250 60,170" fill="#0d141e" stroke="#28394e" stroke-width="1.5"/>
+    <polygon points="460,110 260,190 260,250 460,170" fill="#090e15" stroke="#28394e" stroke-width="1.5"/>
+
+    <!-- Prep Grid Zones on Countertop -->
+    <!-- Zone 1: Recipe Card Terminal -->
+    <polygon points="200,60 260,84 220,100 160,76" fill="#1b2838" stroke="#00ff66" stroke-width="1.2"/>
+    <text x="210" y="82" fill="#00ff66" font-family="'JetBrains Mono', monospace" font-size="9" text-anchor="middle">RECIPE HUD</text>
+
+    <!-- Zone 2: Assembly Stacking Station -->
+    <polygon points="260,105 330,133 285,152 215,124" fill="#182433" stroke="#00ff66" stroke-width="1.5"/>
+    
+    <!-- 3D Greyboxed Burger Stack Layers -->
+    <!-- Bun Base -->
+    <ellipse cx="272" cy="142" rx="28" ry="11" fill="#2d3b4e" stroke="#00ff66" stroke-width="1.2"/>
+    <!-- Patty -->
+    <ellipse cx="272" cy="134" rx="26" ry="10" fill="#202c3d" stroke="#00ff66" stroke-width="1.2"/>
+    <!-- Veggies/Sauce -->
+    <ellipse cx="272" cy="126" rx="24" ry="9" fill="#2d3b4e" stroke="#00ff66" stroke-width="1.2"/>
+    <!-- Bun Top -->
+    <ellipse cx="272" cy="116" rx="27" ry="10" fill="#354963" stroke="#00ff66" stroke-width="1.5"/>
+
+    <!-- Order Sequence Node Graph (Floating Schematic) -->
+    <!-- Node 1: Order In -->
+    <g transform="translate(-80, 20)">
+      <rect x="0" y="0" width="90" height="34" rx="4" fill="#131c28" stroke="#283c54" stroke-width="1.2"/>
+      <text x="45" y="16" fill="#f8fafc" font-family="'Rajdhani', sans-serif" font-weight="700" font-size="11" text-anchor="middle">1. ORDER CARD</text>
+      <text x="45" y="27" fill="#64748b" font-family="'JetBrains Mono', monospace" font-size="8" text-anchor="middle">Queue Stream</text>
+      <line x1="90" y1="17" x2="130" y2="17" stroke="#00ff66" stroke-width="1.5" stroke-dasharray="3,3"/>
+    </g>
+
+    <!-- Node 2: Sequential Assembly -->
+    <g transform="translate(60, 20)">
+      <rect x="0" y="0" width="100" height="34" rx="4" fill="#131c28" stroke="#00ff66" stroke-width="1.4"/>
+      <text x="50" y="16" fill="#00ff66" font-family="'Rajdhani', sans-serif" font-weight="700" font-size="11" text-anchor="middle">2. INGREDIENTS</text>
+      <text x="50" y="27" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="8" text-anchor="middle">Correct Sequence</text>
+    </g>
+
+    <!-- Node 3: Validation / Output -->
+    <g transform="translate(390, 40)">
+      <rect x="0" y="0" width="100" height="34" rx="4" fill="#131c28" stroke="#283c54" stroke-width="1.2"/>
+      <text x="50" y="16" fill="#f8fafc" font-family="'Rajdhani', sans-serif" font-weight="700" font-size="11" text-anchor="middle">3. VERIFICATION</text>
+      <text x="50" y="27" fill="#64748b" font-family="'JetBrains Mono', monospace" font-size="8" text-anchor="middle">Match vs Trash</text>
+      <line x1="-40" y1="17" x2="0" y2="17" stroke="#00ff66" stroke-width="1.5" stroke-dasharray="3,3"/>
+    </g>
+  </g>
+
+  <!-- Big Title & Concept Watermark -->
+  <text x="45" y="380" fill="#ffffff" font-family="'Rajdhani', 'Orbitron', sans-serif" font-weight="800" font-size="34" letter-spacing="2">RE-COOKED</text>
+  <text x="45" y="405" fill="#00ff66" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="600" letter-spacing="1.5">FAST-PACED CULINARY SEQUENCE GAME // CONCEPT &amp; 3D ART</text>
+
+  <!-- Technical Spec Footer Pill -->
+  <rect x="520" y="375" width="240" height="34" rx="4" fill="#101722" stroke="#213044" stroke-width="1"/>
+  <text x="535" y="396" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="10">THEME:</text>
+  <text x="585" y="396" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700">RETHINK, REMIX, REMAKE</text>
+</svg>

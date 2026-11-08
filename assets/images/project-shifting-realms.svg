@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#07090e"/>
+      <stop offset="50%" stop-color="#0e1420"/>
+      <stop offset="100%" stop-color="#06090e"/>
+    </linearGradient>
+    <pattern id="grid2" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1c2738" stroke-width="0.8"/>
+      <circle cx="0" cy="0" r="1.5" fill="#00ff66" opacity="0.3"/>
+    </pattern>
+    <filter id="neonGlow2" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bgGrad2)"/>
+  <rect width="800" height="450" fill="url(#grid2)" opacity="0.65"/>
+
+  <!-- Circuit Trace Accents -->
+  <path d="M 0 100 L 140 100 L 180 60 L 300 60" fill="none" stroke="#00ff66" stroke-width="1.5" opacity="0.4"/>
+  <circle cx="300" cy="60" r="3" fill="#00ff66" opacity="0.7"/>
+  <path d="M 800 350 L 660 350 L 620 390 L 480 390" fill="none" stroke="#00ff66" stroke-width="1.5" opacity="0.4"/>
+  <circle cx="480" cy="390" r="3" fill="#00ff66" opacity="0.7"/>
+
+  <!-- Blueprint Outer Frame -->
+  <rect x="25" y="25" width="750" height="400" rx="6" fill="none" stroke="#223046" stroke-width="1.5"/>
+  <rect x="23" y="23" width="12" height="12" fill="none" stroke="#00ff66" stroke-width="2"/>
+  <rect x="765" y="23" width="12" height="12" fill="none" stroke="#00ff66" stroke-width="2"/>
+  <rect x="23" y="415" width="12" height="12" fill="none" stroke="#00ff66" stroke-width="2"/>
+  <rect x="765" y="415" width="12" height="12" fill="none" stroke="#00ff66" stroke-width="2"/>
+
+  <!-- Header HUD Tag -->
+  <rect x="40" y="40" width="180" height="24" rx="3" fill="#131c28" stroke="#00ff66" stroke-width="1"/>
+  <circle cx="54" cy="52" r="4" fill="#00ff66" filter="url(#neonGlow2)"/>
+  <text x="68" y="56" fill="#00ff66" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" letter-spacing="1.5">LDD SPEC // PRJ-02</text>
+
+  <rect x="580" y="40" width="180" height="24" rx="3" fill="#131c28" stroke="#27384e" stroke-width="1"/>
+  <text x="670" y="56" text-anchor="middle" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="10" letter-spacing="1">BRACKEYS 2026.1 // UNITY</text>
+
+  <!-- Central Visual: 4 Strange Worlds Level Design Matrix -->
+  <g transform="translate(100, 85)">
+    <!-- Quadrant 1: Gravity Inversion & Size Puzzle -->
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="280" height="115" rx="4" fill="#101722" stroke="#243449" stroke-width="1.2"/>
+      <rect x="8" y="8" width="85" height="18" rx="2" fill="#1a2536"/>
+      <text x="50" y="20" fill="#00ff66" font-family="'JetBrains Mono', monospace" font-size="9" text-anchor="middle">CHAMBER 01</text>
+      <text x="105" y="21" fill="#f8fafc" font-family="'Rajdhani', sans-serif" font-weight="700" font-size="12">GRAVITY &amp; SCALE</text>
+      <!-- Isometric wireframe box inverted -->
+      <polygon points="50,45 80,30 110,45 80,60" fill="none" stroke="#00ff66" stroke-width="1.2"/>
+      <polygon points="50,45 80,60 80,95 50,80" fill="#172230" stroke="#00ff66" stroke-width="1.2"/>
+      <polygon points="110,45 80,60 80,95 110,80" fill="#1d2a3c" stroke="#00ff66" stroke-width="1.2"/>
+      <!-- Inverted gravity vector arrows -->
+      <path d="M 160 85 L 160 45 M 153 52 L 160 45 L 167 52" stroke="#00ff66" stroke-width="1.8" fill="none"/>
+      <path d="M 190 45 L 190 85 M 183 78 L 190 85 L 197 78" stroke="#64748b" stroke-width="1.5" fill="none" stroke-dasharray="2,2"/>
+      <text x="210" y="60" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="9">G-VECTOR: -1.0g</text>
+      <text x="210" y="75" fill="#64748b" font-family="'JetBrains Mono', monospace" font-size="9">SCALE DELTA: 4X</text>
+    </g>
+
+    <!-- Quadrant 2: Light & Darkness Navigation -->
+    <g transform="translate(320, 0)">
+      <rect x="0" y="0" width="280" height="115" rx="4" fill="#101722" stroke="#243449" stroke-width="1.2"/>
+      <rect x="8" y="8" width="85" height="18" rx="2" fill="#1a2536"/>
+      <text x="50" y="20" fill="#00ff66" font-family="'JetBrains Mono', monospace" font-size="9" text-anchor="middle">CHAMBER 02</text>
+      <text x="105" y="21" fill="#f8fafc" font-family="'Rajdhani', sans-serif" font-weight="700" font-size="12">THE DARK VOID</text>
+      <!-- Flashlight / cone of vision wireframe -->
+      <path d="M 40 70 L 120 40 L 120 100 Z" fill="#00ff66" fill-opacity="0.15" stroke="#00ff66" stroke-width="1.2"/>
+      <circle cx="40" cy="70" r="5" fill="#00ff66" filter="url(#neonGlow2)"/>
+      <text x="150" y="60" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="9">FOV CONE: 65°</text>
+      <text x="150" y="75" fill="#64748b" font-family="'JetBrains Mono', monospace" font-size="9">RAYMARCH DIST: 15m</text>
+      <text x="150" y="90" fill="#00ff66" font-family="'JetBrains Mono', monospace" font-size="9">OCCLUSION: 94%</text>
+    </g>
+
+    <!-- Quadrant 3: Rotating Rooms -->
+    <g transform="translate(0, 130)">
+      <rect x="0" y="0" width="280" height="115" rx="4" fill="#101722" stroke="#243449" stroke-width="1.2"/>
+      <rect x="8" y="8" width="85" height="18" rx="2" fill="#1a2536"/>
+      <text x="50" y="20" fill="#00ff66" font-family="'JetBrains Mono', monospace" font-size="9" text-anchor="middle">CHAMBER 03</text>
+      <text x="105" y="21" fill="#f8fafc" font-family="'Rajdhani', sans-serif" font-weight="700" font-size="12">ROTATING ROOMS</text>
+      <!-- Circular rotational dial -->
+      <circle cx="70" cy="70" r="32" fill="none" stroke="#2a3c54" stroke-width="1.5"/>
+      <path d="M 70 38 A 32 32 0 0 1 102 70" fill="none" stroke="#00ff66" stroke-width="2" filter="url(#neonGlow2)"/>
+      <rect x="58" y="58" width="24" height="24" fill="#162232" stroke="#00ff66" stroke-width="1.4" transform="rotate(35 70 70)"/>
+      <text x="130" y="60" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="9">AXIS: YAW / ROLL</text>
+      <text x="130" y="75" fill="#64748b" font-family="'JetBrains Mono', monospace" font-size="9">ANGULAR ROT: 90°</text>
+      <text x="130" y="90" fill="#00ff66" font-family="'JetBrains Mono', monospace" font-size="9">SPATIAL SHIFT: ACTIVE</text>
+    </g>
+
+    <!-- Quadrant 4: Crab Island Escape -->
+    <g transform="translate(320, 130)">
+      <rect x="0" y="0" width="280" height="115" rx="4" fill="#101722" stroke="#243449" stroke-width="1.2"/>
+      <rect x="8" y="8" width="85" height="18" rx="2" fill="#1a2536"/>
+      <text x="50" y="20" fill="#00ff66" font-family="'JetBrains Mono', monospace" font-size="9" text-anchor="middle">CHAMBER 04</text>
+      <text x="105" y="21" fill="#f8fafc" font-family="'Rajdhani', sans-serif" font-weight="700" font-size="12">CRAB ATOLL ESCAPE</text>
+      <!-- Island contour grid -->
+      <ellipse cx="65" cy="72" rx="35" ry="22" fill="#152130" stroke="#00ff66" stroke-width="1.2"/>
+      <ellipse cx="65" cy="72" rx="20" ry="12" fill="#1e2e42" stroke="#2e435e" stroke-width="1"/>
+      <circle cx="65" cy="72" r="3" fill="#00ff66"/>
+      <!-- Hazard vectors -->
+      <line x1="35" y1="50" x2="45" y2="60" stroke="#ff4d4d" stroke-width="1.5"/>
+      <line x1="95" y1="90" x2="85" y2="80" stroke="#ff4d4d" stroke-width="1.5"/>
+      <text x="130" y="60" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="9">HAZARD: AI ENTITIES</text>
+      <text x="130" y="75" fill="#64748b" font-family="'JetBrains Mono', monospace" font-size="9">SURVIVAL: EGRESS</text>
+      <text x="130" y="90" fill="#00ff66" font-family="'JetBrains Mono', monospace" font-size="9">OBJECTIVE: EXTRACTION</text>
+    </g>
+  </g>
+
+  <!-- Big Title & Concept Watermark -->
+  <text x="45" y="380" fill="#ffffff" font-family="'Rajdhani', 'Orbitron', sans-serif" font-weight="800" font-size="34" letter-spacing="2">SHIFTING REALMS</text>
+  <text x="45" y="405" fill="#00ff66" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="600" letter-spacing="1.5">MULTI-DIMENSIONAL SPATIAL PUZZLE &amp; LEVEL DESIGN // UNITY</text>
+
+  <!-- Technical Spec Footer Pill -->
+  <rect x="520" y="375" width="240" height="34" rx="4" fill="#101722" stroke="#213044" stroke-width="1"/>
+  <text x="535" y="396" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="10">THEME:</text>
+  <text x="585" y="396" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700">STRANGE PLACES</text>
+</svg>

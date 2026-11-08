@@ -1,0 +1,1083 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yakasiri Suresh // Game Designer Portfolio</title>
+  <meta name="description" content="Portfolio of Yakasiri Suresh — Game Designer specializing in gameplay mechanics, level design, game balancing, and rapid prototyping.">
+  <meta name="keywords" content="Game Designer, Yakasiri Suresh, Level Design, Unity, Game Development, Mechanics, Systems Design, BYOG, Brackeys">
+  <meta name="author" content="Yakasiri Suresh">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:title" content="Yakasiri Suresh // Game Designer Portfolio">
+  <meta property="og:description" content="I build worlds, mechanics & experiences. Explore my game projects, level designs, and systems documentation.">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts: Rajdhani, Inter, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Rajdhani:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Background Animated Circuit & Scanlines -->
+  <canvas id="circuit-canvas"></canvas>
+  <div class="scanline-overlay"></div>
+
+  <div class="site-content">
+
+    <!-- ==================== NAVIGATION BAR ==================== -->
+    <header class="navbar" id="navbar">
+      <div class="container nav-container">
+        <!-- Brand Callout -->
+        <a href="#hero" class="nav-brand">
+          <div class="brand-rig-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+              <line x1="8" y1="21" x2="16" y2="21"></line>
+              <line x1="12" y1="17" x2="12" y2="21"></line>
+            </svg>
+          </div>
+          <div class="brand-text">
+            <span class="brand-name">YAKASIRI SURESH</span>
+            <span class="brand-title">// GAME DESIGNER</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="nav-links" id="navLinks">
+          <a href="#about" class="nav-link">About</a>
+          <a href="#skills" class="nav-link">Skills</a>
+          <a href="#projects" class="nav-link">Projects</a>
+          <a href="#experience" class="nav-link">Experience</a>
+          <a href="#education" class="nav-link">Education</a>
+          <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+
+        <!-- Right Side Nav Actions -->
+        <div class="nav-actions">
+          <!-- RGB Theme Toggle -->
+          <button class="rgb-toggle-btn" id="rgbToggle" title="Cycle RGB Lighting Accent">
+            <span class="rgb-dot"></span>
+            <span>RGB MODE</span>
+          </button>
+
+          <!-- Direct Contact Button -->
+          <a href="#contact" class="btn btn-primary nav-cta-btn">
+            <span>CONTACT</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+
+          <!-- Mobile Hamburger Toggle -->
+          <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- ==================== HERO SECTION ==================== -->
+      <section class="hero-section" id="hero">
+        <div class="container">
+          <div class="hero-grid">
+            
+            <!-- Left Column: Bio & Core Pitch -->
+            <div class="hero-content">
+              <div class="hero-meta-badge">
+                <span class="status-led"></span>
+                <span>SYSTEM STATUS: ACTIVE // OPEN TO OPPORTUNITIES</span>
+              </div>
+
+              <h1 class="hero-name">YAKASIRI SURESH</h1>
+              <div class="hero-role-title">// GAME DESIGNER</div>
+
+              <h2 class="hero-headline">"I BUILD WORLDS, MECHANICS &amp; EXPERIENCES."</h2>
+
+              <p class="hero-bio">
+                Game Design student at ICAT Design &amp; Media College pursuing a B.Sc in Game Art &amp; Design (Major in Game Designing). Focused on architecting innovative gameplay mechanics, designing challenging levels, and translating creative game concepts into satisfying, playable experiences.
+              </p>
+
+              <!-- Action CTAs -->
+              <div class="hero-actions">
+                <a href="#projects" class="btn btn-primary">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                  </svg>
+                  <span>VIEW MY PROJECTS</span>
+                </a>
+
+                <a href="#contact" class="btn btn-secondary">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                  <span>CONTACT ME</span>
+                </a>
+
+                <a href="https://fein999.itch.io" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" title="View Itch.io Profile">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M2.3 0c-.7 0-1.2.6-1.2 1.3v.8c0 .2.1.4.2.6l1.7 6.1v13.9c0 .7.6 1.3 1.3 1.3h15.4c.7 0 1.3-.6 1.3-1.3V8.8l1.7-6.1c.1-.2.2-.4.2-.6v-.8c0-.7-.6-1.3-1.3-1.3H2.3zm2.5 3h14.4l-1 3.5h-12.4L4.8 3zm2.6 6h2.1v2.4H7.4V9zm7.1 0h2.1v2.4h-2.1V9zm-4.7 4.2h4.4v2.1H9.8v-2.1z"/>
+                  </svg>
+                  <span>ITCH.IO</span>
+                </a>
+              </div>
+
+              <!-- Hardware Telemetry Bar -->
+              <div class="hero-telemetry-row">
+                <div class="telemetry-item">
+                  <span class="telemetry-label">PRIMARY ENGINE</span>
+                  <span class="telemetry-val accent">UNITY 3D / 2D</span>
+                </div>
+                <div class="telemetry-item">
+                  <span class="telemetry-label">SPECIALIZATION</span>
+                  <span class="telemetry-val">SYSTEMS &amp; LEVELS</span>
+                </div>
+                <div class="telemetry-item">
+                  <span class="telemetry-label">METHODOLOGY</span>
+                  <span class="telemetry-val accent">MDA FRAMEWORK</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Column: Battlestation Centerpiece Visual -->
+            <div class="hero-visual-wrap">
+              <div class="battlestation-card hardware-box">
+                <!-- Large Battlestation Setup SVG -->
+                <img src="assets/images/gaming-battlestation.svg" onerror="this.onerror=null; this.src='Assets/images/gaming-battlestation.svg';" alt="High-End Game Designer Battlestation Setup" width="1000" height="620">
+
+                <!-- Floating HUD Readout 1 (Top Right) -->
+                <div class="floating-hud floating-hud-1">
+                  <div class="hud-icon">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                      <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                      <polyline points="2 17 12 22 22 17"></polyline>
+                      <polyline points="2 12 12 17 22 12"></polyline>
+                    </svg>
+                  </div>
+                  <div class="floating-hud-text">
+                    <strong>UNITY GREYBOX RIG</strong>
+                    <span>REAL-TIME 144 FPS VIEWPORT</span>
+                  </div>
+                </div>
+
+                <!-- Floating HUD Readout 2 (Bottom Left) -->
+                <div class="floating-hud floating-hud-2">
+                  <div class="hud-icon">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                  </div>
+                  <div class="floating-hud-text">
+                    <strong>RAPID JAM PROTOTYPER</strong>
+                    <span>BYOG • BRACKEYS • ICAT</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== ABOUT ME SECTION ==================== -->
+      <section class="about-section" id="about">
+        <div class="container">
+          <div class="about-grid">
+            
+            <!-- Left: Bio & Philosophy -->
+            <div class="about-text">
+              <div class="section-label">// 01. PROFILE OVERVIEW</div>
+              <h2 class="section-title">ENGINEERING GAMEPLAY THROUGH <span class="accent-text">DESIGN RIGOR</span></h2>
+              
+              <p>
+                I am a <strong>Game Design student at ICAT Design &amp; Media College</strong>, pursuing a B.Sc in Game Art &amp; Design with a major in Game Designing (Expected Graduation: 2027).
+              </p>
+
+              <p>
+                My design philosophy centers on turning creative ideas into playable experiences. I enjoy dissecting and architecting gameplay mechanics, constructing balanced level progressions, experimenting with bold concepts, and shaping the exact moment-to-moment feedback players feel with controller or keyboard in hand.
+              </p>
+
+              <p>
+                Through competitive game jams like <strong>BYOG</strong> and <strong>Brackeys</strong>, I have honed the discipline of rapid prototyping under tight constraints—iterating rapidly from core concept documentation to fully functional Unity greyboxes and release-ready builds.
+              </p>
+
+              <!-- Design Pillars -->
+              <div class="design-pillars">
+                <div class="pillar-card">
+                  <div class="pillar-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect x="2" y="6" width="20" height="12" rx="2"></rect>
+                      <circle cx="8" cy="12" r="2"></circle>
+                      <path d="M16 10h.01M16 14h.01M14 12h.01M18 12h.01"></path>
+                    </svg>
+                  </div>
+                  <h3 class="pillar-title">Mechanics &amp; Systems</h3>
+                  <p class="pillar-desc">Designing balanced rules, input responsiveness, and satisfying player feedback loops.</p>
+                </div>
+
+                <div class="pillar-card">
+                  <div class="pillar-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                      <polyline points="2 17 12 22 22 17"></polyline>
+                      <polyline points="2 12 12 17 22 12"></polyline>
+                    </svg>
+                  </div>
+                  <h3 class="pillar-title">Level Architecture</h3>
+                  <p class="pillar-desc">Greyboxing spatial flow, perspective puzzles, difficulty curves, and environmental pacing.</p>
+                </div>
+
+                <div class="pillar-card">
+                  <div class="pillar-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                    </svg>
+                  </div>
+                  <h3 class="pillar-title">Rapid Prototyping</h3>
+                  <p class="pillar-desc">Iterating rapidly in 48–72 hour game jams to validate hypotheses and eliminate friction.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right: Designer Spec Sheet (Hardware Style) -->
+            <div class="spec-sheet-panel hardware-box">
+              <div class="spec-sheet-header">
+                <h4>DESIGNER SPECIFICATION SHEET</h4>
+                <div class="hud-tag active">SYS-VERIFIED</div>
+              </div>
+
+              <div class="spec-sheet-body">
+                <div class="spec-row">
+                  <span class="spec-key">FULL NAME</span>
+                  <span class="spec-val">Yakasiri Suresh</span>
+                </div>
+                <div class="spec-row">
+                  <span class="spec-key">DESIGN DISCIPLINE</span>
+                  <span class="spec-val accent">Game Designer</span>
+                </div>
+                <div class="spec-row">
+                  <span class="spec-key">COLLEGE / INSTITUTION</span>
+                  <span class="spec-val">ICAT Design &amp; Media College</span>
+                </div>
+                <div class="spec-row">
+                  <span class="spec-key">ACADEMIC PROGRAM</span>
+                  <span class="spec-val">B.Sc Game Art &amp; Design</span>
+                </div>
+                <div class="spec-row">
+                  <span class="spec-key">MAJOR</span>
+                  <span class="spec-val accent">Game Designing</span>
+                </div>
+                <div class="spec-row">
+                  <span class="spec-key">GRADUATION TARGET</span>
+                  <span class="spec-val">2027</span>
+                </div>
+                <div class="spec-row">
+                  <span class="spec-key">DESIGN FRAMEWORK</span>
+                  <span class="spec-val">MDA (Mechanics, Dynamics, Aesthetics)</span>
+                </div>
+                <div class="spec-row">
+                  <span class="spec-key">CORE TOOL</span>
+                  <span class="spec-val accent">Unity (Level &amp; Greybox)</span>
+                </div>
+                <div class="spec-row">
+                  <span class="spec-key">JAM TRACK RECORD</span>
+                  <span class="spec-val">BYOG 2025, Brackeys 2026.1, ICAT 2024</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== SKILLS SECTION ==================== -->
+      <section class="skills-section" id="skills">
+        <div class="container">
+          <div class="section-label">// 02. SKILLS ARCHITECTURE</div>
+          <h2 class="section-title">TECHNICAL TOOLS &amp; <span class="accent-text">CORE DESIGN SYSTEMS</span></h2>
+          <p class="section-desc">
+            A balanced synthesis of software tooling for rapid implementation alongside systems design methodologies for crafting engaging game feel.
+          </p>
+
+          <div class="skills-wrapper">
+
+            <!-- Category 1: Technical Skills -->
+            <div class="skill-category-panel hardware-box">
+              <div class="category-header">
+                <div class="category-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="2" y="3" width="20" height="14" rx="2"></rect>
+                    <line x1="8" y1="21" x2="16" y2="21"></line>
+                    <line x1="12" y1="17" x2="12" y2="21"></line>
+                  </svg>
+                </div>
+                <div class="category-title-wrap">
+                  <h3>TECHNICAL SKILLS</h3>
+                  <span>ENGINE IMPLEMENTATION &amp; DESIGN DOCUMENTATION</span>
+                </div>
+              </div>
+
+              <div class="skills-grid">
+                <!-- Skill 1: Unity -->
+                <div class="skill-card">
+                  <div class="skill-card-top">
+                    <div class="skill-icon-pill">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                        <polyline points="2 17 12 22 22 17"></polyline>
+                        <polyline points="2 12 12 17 22 12"></polyline>
+                      </svg>
+                    </div>
+                    <span class="skill-badge">PRIMARY ENGINE</span>
+                  </div>
+                  <div class="skill-name">Unity – Level Implementation &amp; Greyboxing</div>
+                  <div class="skill-detail">Rapid level blockout, colliders, trigger volumes, lighting test scenes, and camera framing.</div>
+                </div>
+
+                <!-- Skill 2: Level Layout Design -->
+                <div class="skill-card">
+                  <div class="skill-card-top">
+                    <div class="skill-icon-pill">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+                        <line x1="3" y1="9" x2="21" y2="9"></line>
+                        <line x1="9" y1="21" x2="9" y2="9"></line>
+                      </svg>
+                    </div>
+                    <span class="skill-badge">SPATIAL</span>
+                  </div>
+                  <div class="skill-name">Level Layout Design</div>
+                  <div class="skill-detail">Architecting spatial choke points, sightlines, player flow, landmarking, and encounter arenas.</div>
+                </div>
+
+                <!-- Skill 3: GDD -->
+                <div class="skill-card">
+                  <div class="skill-card-top">
+                    <div class="skill-icon-pill">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <line x1="16" y1="13" x2="8" y2="13"></line>
+                        <line x1="16" y1="17" x2="8" y2="17"></line>
+                        <polyline points="10 9 9 9 8 9"></polyline>
+                      </svg>
+                    </div>
+                    <span class="skill-badge">SPEC</span>
+                  </div>
+                  <div class="skill-name">Game Design Documentation (GDD)</div>
+                  <div class="skill-detail">Authoring clear feature specifications, player loops, edge cases, and economy sheets.</div>
+                </div>
+
+                <!-- Skill 4: CDD -->
+                <div class="skill-card">
+                  <div class="skill-card-top">
+                    <div class="skill-icon-pill">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                      </svg>
+                    </div>
+                    <span class="skill-badge">CHARACTERS</span>
+                  </div>
+                  <div class="skill-name">Character Design Documentation (CDD)</div>
+                  <div class="skill-detail">Defining player avatar abilities, hitbox envelopes, movement parameters, and NPC behaviors.</div>
+                </div>
+
+                <!-- Skill 5: LDD -->
+                <div class="skill-card">
+                  <div class="skill-card-top">
+                    <div class="skill-icon-pill">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"></polygon>
+                        <line x1="8" y1="2" x2="8" y2="18"></line>
+                        <line x1="16" y1="6" x2="16" y2="22"></line>
+                      </svg>
+                    </div>
+                    <span class="skill-badge">LEVEL SPEC</span>
+                  </div>
+                  <div class="skill-name">Level Design Documentation (LDD)</div>
+                  <div class="skill-detail">Structuring encounter beat sheets, objective pacing, puzzle topologies, and asset placement sheets.</div>
+                </div>
+
+                <!-- Skill 6: Photoshop -->
+                <div class="skill-card">
+                  <div class="skill-card-top">
+                    <div class="skill-icon-pill">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line>
+                      </svg>
+                    </div>
+                    <span class="skill-badge">INTERFACE</span>
+                  </div>
+                  <div class="skill-name">Adobe Photoshop – UI/UX Design</div>
+                  <div class="skill-detail">Designing clean in-game HUDs, menu wireframes, icon assets, and visual player guidance cues.</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Category 2: Core Skills -->
+            <div class="skill-category-panel hardware-box">
+              <div class="category-header">
+                <div class="category-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                  </svg>
+                </div>
+                <div class="category-title-wrap">
+                  <h3>CORE SKILLS</h3>
+                  <span>GAME SYSTEMS, METHODOLOGY &amp; BALANCING</span>
+                </div>
+              </div>
+
+              <div class="skills-grid">
+                <!-- Core 1: Systems Design -->
+                <div class="skill-card">
+                  <div class="skill-card-top">
+                    <div class="skill-icon-pill">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="18" cy="5" r="3"></circle>
+                        <circle cx="6" cy="12" r="3"></circle>
+                        <circle cx="18" cy="19" r="3"></circle>
+                        <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+                        <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+                      </svg>
+                    </div>
+                    <span class="skill-badge">CORE</span>
+                  </div>
+                  <div class="skill-name">Systems Design &amp; Mechanics</div>
+                  <div class="skill-detail">Interlocking mechanics, rules engines, resource pools, and emergent gameplay interactions.</div>
+                </div>
+
+                <!-- Core 2: Game Balancing -->
+                <div class="skill-card">
+                  <div class="skill-card-top">
+                    <div class="skill-icon-pill">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 3v18"></path>
+                        <rect x="2" y="7" width="20" height="2" rx="1"></rect>
+                        <path d="M5 9l-3 6h6l-3-6z"></path>
+                        <path d="M19 9l-3 6h6l-3-6z"></path>
+                      </svg>
+                    </div>
+                    <span class="skill-badge">TUNING</span>
+                  </div>
+                  <div class="skill-name">Game Balancing</div>
+                  <div class="skill-detail">Mathematical tuning of rewards, timing windows, collision margins, and difficulty levers.</div>
+                </div>
+
+                <!-- Core 3: Level Design & Progression -->
+                <div class="skill-card">
+                  <div class="skill-card-top">
+                    <div class="skill-icon-pill">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                      </svg>
+                    </div>
+                    <span class="skill-badge">PACING</span>
+                  </div>
+                  <div class="skill-name">Level Design &amp; Progression</div>
+                  <div class="skill-detail">Sequencing challenges from introductory mechanics to mastery climaxes.</div>
+                </div>
+
+                <!-- Core 4: Player Progression -->
+                <div class="skill-card">
+                  <div class="skill-card-top">
+                    <div class="skill-icon-pill">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="20" x2="18" y2="10"></line>
+                        <line x1="12" y1="20" x2="12" y2="4"></line>
+                        <line x1="6" y1="20" x2="6" y2="14"></line>
+                      </svg>
+                    </div>
+                    <span class="skill-badge">FLOW</span>
+                  </div>
+                  <div class="skill-name">Player Progression &amp; Difficulty Curves</div>
+                  <div class="skill-detail">Calibrating challenge-vs-skill ratios to avoid cognitive overload while preventing boredom.</div>
+                </div>
+
+                <!-- Core 5: Feedback Analysis -->
+                <div class="skill-card">
+                  <div class="skill-card-top">
+                    <div class="skill-icon-pill">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                      </svg>
+                    </div>
+                    <span class="skill-badge">ITERATION</span>
+                  </div>
+                  <div class="skill-name">Player Feedback Analysis &amp; Iteration</div>
+                  <div class="skill-detail">Synthesizing qualitative playtest telemetry to pinpoint player friction and refine controls.</div>
+                </div>
+
+                <!-- Core 6: Rapid Prototyping -->
+                <div class="skill-card">
+                  <div class="skill-card-top">
+                    <div class="skill-icon-pill">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                      </svg>
+                    </div>
+                    <span class="skill-badge">SPEED</span>
+                  </div>
+                  <div class="skill-name">Game Jam Rapid Prototyping</div>
+                  <div class="skill-detail">Fast-turnaround greyboxing, fail-fast testing, and scope management under 48-hour jams.</div>
+                </div>
+
+                <!-- Core 7: MDA Framework -->
+                <div class="skill-card">
+                  <div class="skill-card-top">
+                    <div class="skill-icon-pill">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                        <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                        <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                        <line x1="6" y1="18" x2="6.01" y2="18"></line>
+                      </svg>
+                    </div>
+                    <span class="skill-badge">THEORY</span>
+                  </div>
+                  <div class="skill-name">MDA Framework</div>
+                  <div class="skill-detail">Analyzing games systematically through Mechanics (rules), Dynamics (systems in motion), and Aesthetics (emotional outcome).</div>
+                </div>
+
+                <!-- Core 8: Constraint-Based Design -->
+                <div class="skill-card">
+                  <div class="skill-card-top">
+                    <div class="skill-icon-pill">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                        <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                      </svg>
+                    </div>
+                    <span class="skill-badge">CREATIVE</span>
+                  </div>
+                  <div class="skill-name">Constraint-Based Design</div>
+                  <div class="skill-detail">Leveraging tight jam themes and platform boundaries to spark innovative game design solutions.</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== PROJECTS SECTION (MAIN FOCUS) ==================== -->
+      <section class="projects-section" id="projects">
+        <div class="container">
+          <div class="projects-header-wrap">
+            <div>
+              <div class="section-label">// 03. PORTFOLIO SHOWCASE</div>
+              <h2 class="section-title">FEATURED <span class="accent-text">GAME PROJECTS</span></h2>
+              <p class="section-desc">
+                Playable titles created during major game jams and college showcases. Each project demonstrates core mechanics, level pacing, and rapid design execution.
+              </p>
+            </div>
+
+            <!-- Category Filter Buttons -->
+            <div class="project-filters">
+              <button class="filter-btn active" data-filter="all">ALL (3)</button>
+              <button class="filter-btn" data-filter="web">WEB PLAYABLE</button>
+              <button class="filter-btn" data-filter="unity">UNITY ENGINE</button>
+              <button class="filter-btn" data-filter="android">ANDROID APK</button>
+            </div>
+          </div>
+
+          <div class="projects-grid">
+
+            <!-- PROJECT 1: RE-COOKED -->
+            <div class="project-card hardware-box" data-category="web" data-platforms="web">
+              <div class="project-card-header">
+                <span class="project-code">PRJ-01 // BYOG 2025</span>
+                <span class="project-platform-badge">WEB BROWSER</span>
+              </div>
+
+              <!-- Media / Screenshots Container with Interactive Switcher -->
+              <div class="project-media-wrap" id="recookedMediaWrap">
+                <img id="recookedCardImg" src="assets/images/recooked-combo.png" onerror="this.onerror=null; this.src='Assets/images/recooked-combo.png';" alt="RE-COOKED - Assembled Burger &amp; Fries Combo" loading="lazy">
+                <div class="project-media-overlay">
+                  <a href="https://jsrreddy.itch.io/recooked" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                    <span>PLAY NOW</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Mini Screenshot Selector Pills -->
+              <div class="card-screenshot-bar" id="recookedScreenshotBar">
+                <button class="scr-pill active" data-target="recookedCardImg" data-src="assets/images/recooked-combo.png" data-alt="RE-COOKED Burger &amp; Fries Combo">Combo Order</button>
+                <button class="scr-pill" data-target="recookedCardImg" data-src="assets/images/recooked-workstation.png" data-alt="RE-COOKED Kitchen Workstation Assembly">Assembly Line</button>
+                <button class="scr-pill" data-target="recookedCardImg" data-src="assets/images/recooked-menu.png" data-alt="RE-COOKED Title Screen">Menu UI</button>
+                <button class="scr-pill" data-target="recookedCardImg" data-src="assets/images/project-recooked.svg" data-alt="RE-COOKED GDD Blueprint">GDD Blueprint</button>
+              </div>
+
+              <div class="project-card-body">
+                <div class="project-meta-pills">
+                  <span class="meta-pill role">Concept &amp; 3D Artist</span>
+                  <span class="meta-pill">BYOG 2025</span>
+                  <span class="meta-pill">Theme: Rethink, Remix, Remake</span>
+                </div>
+
+                <h3 class="project-title">RE-COOKED</h3>
+
+                <p class="project-concept">
+                  A fast-paced cooking game where players prepare burgers according to customer orders. Players must follow recipe cards and select ingredients in the correct sequence. Incorrect orders are sent to the trash.
+                </p>
+
+                <div class="project-actions">
+                  <a href="https://jsrreddy.itch.io/recooked" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" title="Play RE-COOKED on Itch.io">
+                    <span>PLAY HERE</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                  </a>
+                  <button class="btn btn-secondary btn-sm view-details-btn" data-project="recooked">
+                    <span>DESIGN SPEC</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- PROJECT 2: SHIFTING REALMS -->
+            <div class="project-card hardware-box" data-category="unity" data-platforms="unity web">
+              <div class="project-card-header">
+                <span class="project-code">PRJ-02 // BRACKEYS 2026.1</span>
+                <span class="project-platform-badge">UNITY 3D</span>
+              </div>
+
+              <!-- Media / Screenshots Container with Interactive Switcher -->
+              <div class="project-media-wrap" id="shiftingMediaWrap">
+                <img id="shiftingCardImg" src="assets/images/shifting-library.png" onerror="this.onerror=null; this.src='Assets/images/shifting-library.png';" alt="SHIFTING REALMS - Size-Based Library Puzzle" loading="lazy">
+                <div class="project-media-overlay">
+                  <a href="https://shaik-imamsaheb.itch.io/shifting-realms" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                    <span>PLAY NOW</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Mini Screenshot Selector Pills -->
+              <div class="card-screenshot-bar" id="shiftingScreenshotBar">
+                <button class="scr-pill active" data-target="shiftingCardImg" data-src="assets/images/shifting-library.png" data-alt="SHIFTING REALMS Size-Based Library Puzzle">Size Puzzles</button>
+                <button class="scr-pill" data-target="shiftingCardImg" data-src="assets/images/shifting-darkness.png" data-alt="SHIFTING REALMS Dark Void Navigation">Dark Void</button>
+                <button class="scr-pill" data-target="shiftingCardImg" data-src="assets/images/shifting-island.png" data-alt="SHIFTING REALMS Crab Island Escape">Crab Island</button>
+                <button class="scr-pill" data-target="shiftingCardImg" data-src="assets/images/project-shifting-realms.svg" data-alt="SHIFTING REALMS LDD Blueprint">LDD Blueprint</button>
+              </div>
+
+              <div class="project-card-body">
+                <div class="project-meta-pills">
+                  <span class="meta-pill role">Level Designer</span>
+                  <span class="meta-pill">Brackeys Jam 2026.1</span>
+                  <span class="meta-pill">Theme: Strange Places</span>
+                  <span class="meta-pill">Engine: Unity</span>
+                </div>
+
+                <h3 class="project-title">SHIFTING REALMS</h3>
+
+                <p class="project-concept">
+                  Explore four strange worlds where gravity, light and perspective bend reality. Each world introduces a different gameplay challenge, including size-based puzzles, navigating through darkness, rotating rooms and escaping a crab-infested island.
+                </p>
+
+                <div class="project-actions">
+                  <a href="https://shaik-imamsaheb.itch.io/shifting-realms" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" title="Play Shifting Realms on Itch.io">
+                    <span>PLAY HERE</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                  </a>
+                  <button class="btn btn-secondary btn-sm view-details-btn" data-project="shifting-realms">
+                    <span>DESIGN SPEC</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- PROJECT 3: BTS: BENGALURU TRAFFIC SIMULATOR -->
+            <div class="project-card hardware-box" data-category="android" data-platforms="android">
+              <div class="project-card-header">
+                <span class="project-code">PRJ-03 // ICAT JAM 2024</span>
+                <span class="project-platform-badge">ANDROID APK</span>
+              </div>
+
+              <!-- Media / Screenshots Container with Interactive Switcher -->
+              <div class="project-media-wrap" id="btsMediaWrap">
+                <img id="btsCardImg" src="assets/images/bts-menu.png" onerror="this.onerror=null; this.src='Assets/images/bts-menu.png';" alt="BTS: Bengaluru Traffic Simulator - Menu UI" loading="lazy">
+                <div class="project-media-overlay">
+                  <a href="https://github.com/fein999x/BTS-Bengaluru-Traffic-Simulator/releases/download/v0.1.0-alpha/BTS.apk" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                    <span>DOWNLOAD APK</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Mini Screenshot Selector Pills -->
+              <div class="card-screenshot-bar" id="btsScreenshotBar">
+                <button class="scr-pill active" data-target="btsCardImg" data-src="assets/images/bts-menu.png" data-alt="BTS Menu Screen">Menu UI</button>
+                <button class="scr-pill" data-target="btsCardImg" data-src="assets/images/bts-gameplay.png" data-alt="BTS In-Game Highway Gameplay">Gameplay</button>
+                <button class="scr-pill" data-target="btsCardImg" data-src="assets/images/bts-greybox.png" data-alt="BTS Unity Editor Greybox Level Layout">Unity Greybox</button>
+                <button class="scr-pill" data-target="btsCardImg" data-src="assets/images/project-bts.svg" data-alt="BTS System Design Blueprint">GDD Blueprint</button>
+              </div>
+
+              <div class="project-card-body">
+                <div class="project-meta-pills">
+                  <span class="meta-pill role">Game Designer</span>
+                  <span class="meta-pill">ICAT Jam 2024</span>
+                  <span class="meta-pill">Theme: Reverse</span>
+                  <span class="meta-pill">Platform: Android</span>
+                </div>
+
+                <h3 class="project-title">BTS: BENGALURU TRAFFIC SIMULATOR</h3>
+
+                <p class="project-concept">
+                  A mind-bending arcade driving game where players navigate a chaotic two-lane highway. Players can drive safely on the left lane or risk the oncoming traffic lane for shortcuts. The game features dynamic control inversions, traffic signals and three escalating levels of difficulty.
+                </p>
+
+                <div class="project-actions">
+                  <a href="https://github.com/fein999x/BTS-Bengaluru-Traffic-Simulator/releases/download/v0.1.0-alpha/BTS.apk" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" title="Download Android APK">
+                    <span>DOWNLOAD APK</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                  </a>
+                  <button class="btn btn-secondary btn-sm view-details-btn" data-project="bts">
+                    <span>DESIGN SPEC</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== EXPERIENCE SECTION ==================== -->
+      <section class="experience-section" id="experience">
+        <div class="container">
+          <div class="section-label">// 04. TOURNAMENT OPERATIONS &amp; LEADERSHIP</div>
+          <h2 class="section-title">ADDITIONAL <span class="accent-text">EXPERIENCE</span></h2>
+          <p class="section-desc">
+            Applying competitive systems balance, brackets architecture, and real-time operational coordination to esports events.
+          </p>
+
+          <div class="experience-card hardware-box">
+            <div class="experience-grid">
+              
+              <!-- Info Panel -->
+              <div class="experience-info-panel">
+                <div>
+                  <div class="experience-header-tag">
+                    <span class="hud-tag active">COMPETITIVE ESPORTS OPS</span>
+                    <span class="hud-tag">2025</span>
+                  </div>
+
+                  <h3 class="experience-role">VALORANT TOURNAMENT MANAGER</h3>
+                  <div class="experience-org">// ICAT Gamers, 2025</div>
+
+                  <div class="experience-duties-list">
+                    <div class="duty-item">
+                      <div class="duty-bullet">✓</div>
+                      <div class="duty-text">
+                        <strong>Organized and managed a competitive tournament for 40+ players</strong>, maintaining strict schedules and clear communication channels across multiple match stages.
+                      </div>
+                    </div>
+
+                    <div class="duty-item">
+                      <div class="duty-bullet">✓</div>
+                      <div class="duty-text">
+                        <strong>Designed the tournament bracket structure</strong>, ensuring fair seeding, balanced group advancement, and double-elimination progression.
+                      </div>
+                    </div>
+
+                    <div class="duty-item">
+                      <div class="duty-bullet">✓</div>
+                      <div class="duty-text">
+                        <strong>Coordinated player positioning, rules and technical troubleshooting</strong>, resolving real-time latency issues, hardware disconnects, and rules disputes on the fly.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 1st Place Trophy Callout Box -->
+                <div class="trophy-callout">
+                  <div class="trophy-icon-wrap">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
+                      <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path>
+                      <path d="M4 22h16"></path>
+                      <path d="M10 14.66V17c0 .55-.45 1-1 1H7v4h10v-4h-2c-.55 0-1-.45-1-1v-2.34"></path>
+                      <path d="M6 4h12v7a6 6 0 0 1-12 0V4z"></path>
+                    </svg>
+                  </div>
+                  <div class="trophy-text">
+                    <strong>1st Place Championship Recognition</strong>
+                    <span>The team secured first place and received official trophy recognition for outstanding tournament management and competitive execution.</span>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Visual Bracket Diagram -->
+              <div class="experience-visual-panel">
+                <img src="assets/images/tournament-bracket.svg" onerror="this.onerror=null; this.src='Assets/images/tournament-bracket.svg';" alt="Valorant Tournament Bracket Schematic" loading="lazy">
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== EDUCATION SECTION ==================== -->
+      <section class="education-section" id="education">
+        <div class="container">
+          <div class="section-label">// 05. ACADEMIC FOUNDATION</div>
+          <h2 class="section-title">FORMAL <span class="accent-text">EDUCATION</span></h2>
+          <p class="section-desc">
+            Rigorous undergraduate studies bridging gameplay system mechanics, level design theory, and practical game production.
+          </p>
+
+          <div class="education-card hardware-box">
+            <!-- Left Info -->
+            <div class="edu-main">
+              <div class="edu-badge-row">
+                <span class="hud-tag active">UNDERGRADUATE DEGREE</span>
+                <span class="hud-tag">EXPECTED 2027</span>
+              </div>
+
+              <h3 class="edu-degree">B.Sc Game Art &amp; Design</h3>
+              <div class="edu-major">// Major in Game Designing</div>
+              <div class="edu-college">ICAT Design &amp; Media College</div>
+
+              <p class="edu-desc">
+                Engaged in deep coursework centered on systems design, spatial level greyboxing, player progression psychology, game design documentation (GDD, CDD, LDD), rapid game jam prototyping, and UI/UX design. Developing production-ready methodologies to design engaging player experiences.
+              </p>
+            </div>
+
+            <!-- Right Metrics Panel -->
+            <div class="edu-metrics-panel">
+              <div class="edu-metric-item">
+                <span class="edu-metric-label">CORE SPECIALIZATION</span>
+                <span class="edu-metric-val accent">GAME DESIGNING</span>
+              </div>
+              <div class="edu-metric-item">
+                <span class="edu-metric-label">DEGREE PROGRAM</span>
+                <span class="edu-metric-val">B.SC GAME ART &amp; DESIGN</span>
+              </div>
+              <div class="edu-metric-item">
+                <span class="edu-metric-label">EXPECTED GRADUATION</span>
+                <span class="edu-metric-val accent">2027</span>
+              </div>
+              <div class="edu-metric-item">
+                <span class="edu-metric-label">INSTITUTION</span>
+                <span class="edu-metric-val">ICAT COLLEGE</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== CONTACT SECTION ==================== -->
+      <section class="contact-section" id="contact">
+        <div class="container">
+          <div class="contact-grid">
+            
+            <!-- Left Info -->
+            <div class="contact-info">
+              <div class="section-label">// 06. INITIATE CONTACT</div>
+              <h2 class="section-title">LET'S BUILD SOMETHING <span class="accent-text">EXCEPTIONAL</span></h2>
+              <p>
+                Interested in discussing a game design role, game jam collaboration, or mechanics prototyping? I am always eager to connect with studios, recruiters, and fellow game developers.
+              </p>
+
+              <div class="contact-links-list">
+                <!-- Email Link -->
+                <a href="mailto:sureshyakasiri2004@gmail.com" class="contact-link-card">
+                  <div class="contact-link-left">
+                    <div class="contact-icon-pill">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                      </svg>
+                    </div>
+                    <div class="contact-label-wrap">
+                      <span class="contact-platform">DIRECT EMAIL</span>
+                      <span class="contact-handle">sureshyakasiri2004@gmail.com</span>
+                    </div>
+                  </div>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
+
+                <!-- GitHub Profile -->
+                <a href="https://github.com/fein999x" target="_blank" rel="noopener noreferrer" class="contact-link-card">
+                  <div class="contact-link-left">
+                    <div class="contact-icon-pill">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                      </svg>
+                    </div>
+                    <div class="contact-label-wrap">
+                      <span class="contact-platform">GITHUB PROFILE</span>
+                      <span class="contact-handle">github.com/fein999x</span>
+                    </div>
+                  </div>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
+
+                <!-- Itch.io Profile -->
+                <a href="https://fein999.itch.io" target="_blank" rel="noopener noreferrer" class="contact-link-card">
+                  <div class="contact-link-left">
+                    <div class="contact-icon-pill">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M2.3 0c-.7 0-1.2.6-1.2 1.3v.8c0 .2.1.4.2.6l1.7 6.1v13.9c0 .7.6 1.3 1.3 1.3h15.4c.7 0 1.3-.6 1.3-1.3V8.8l1.7-6.1c.1-.2.2-.4.2-.6v-.8c0-.7-.6-1.3-1.3-1.3H2.3zm2.5 3h14.4l-1 3.5h-12.4L4.8 3zm2.6 6h2.1v2.4H7.4V9zm7.1 0h2.1v2.4h-2.1V9zm-4.7 4.2h4.4v2.1H9.8v-2.1z"/>
+                      </svg>
+                    </div>
+                    <div class="contact-label-wrap">
+                      <span class="contact-platform">ITCH.IO GAMES</span>
+                      <span class="contact-handle">fein999.itch.io</span>
+                    </div>
+                  </div>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
+              </div>
+
+              <!-- Quick Clipboard Copy Button -->
+              <button class="btn btn-secondary btn-sm" id="copyEmailBtn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+                <span>COPY EMAIL ADDRESS</span>
+              </button>
+            </div>
+
+            <!-- Right: Interactive Message Launcher -->
+            <div class="mail-terminal-card hardware-box">
+              <div class="terminal-header">
+                <div class="terminal-dots">
+                  <span class="terminal-dot dot-red"></span>
+                  <span class="terminal-dot dot-yellow"></span>
+                  <span class="terminal-dot dot-green"></span>
+                </div>
+                <div class="terminal-title">EMAIL CLIENT COMPOSER // PORT 465</div>
+                <div class="hud-tag active">ONLINE</div>
+              </div>
+
+              <div class="terminal-body">
+                <form id="contactComposerForm">
+                  <div class="form-group">
+                    <label for="senderName">Your Name / Studio</label>
+                    <input type="text" id="senderName" class="form-control" placeholder="e.g. Alex // Game Recruiter" required>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="inquiryType">Inquiry Category</label>
+                    <select id="inquiryType" class="form-control">
+                      <option value="Game Design Role Opportunity">Game Design Role Opportunity</option>
+                      <option value="Game Jam Collaboration">Game Jam Collaboration</option>
+                      <option value="Level Design Inquiry">Level Design / Freelance Project</option>
+                      <option value="Portfolio Review / General">Portfolio Review / Feedback</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="senderMessage">Message</label>
+                    <textarea id="senderMessage" class="form-control" placeholder="Hi Yakasiri, I reviewed your game design portfolio and would love to discuss..." required></textarea>
+                  </div>
+
+                  <button type="submit" class="btn btn-primary" style="width: 100%;">
+                    <span>LAUNCH EMAIL CLIENT</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                      <line x1="22" y1="2" x2="11" y2="13"></line>
+                      <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                    </svg>
+                  </button>
+                </form>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <h4>YAKASIRI SURESH</h4>
+            <span>// GAME DESIGNER</span>
+          </div>
+
+          <div class="footer-status-pill">
+            <span class="status-led"></span>
+            <span>HARDWARE STATUS: ONLINE // 60 FPS OPTIMAL</span>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="footer-copy">
+            &copy; 2026 Yakasiri Suresh. Built with Gaming Hardware × Game Designer aesthetic. Hosted for GitHub Pages.
+          </div>
+
+          <a href="#hero" class="back-to-top">
+            <span>BACK TO TOP</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <line x1="12" y1="19" x2="12" y2="5"></line>
+              <polyline points="5 12 12 5 19 12"></polyline>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- ==================== PROJECT DETAIL MODAL ==================== -->
+  <div class="modal-backdrop" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-container hardware-box">
+      <div class="modal-header">
+        <div>
+          <div class="hud-tag active" id="modalEvent">EVENT // GAME JAM</div>
+          <h3 id="modalTitle" style="font-size: 1.6rem; color: #ffffff; margin-top: 0.35rem; font-weight: 800;">PROJECT TITLE</h3>
+          <div class="brand-title" id="modalRole">// ROLE</div>
+        </div>
+        <button class="modal-close-btn" id="modalClose" aria-label="Close dialog">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <div class="modal-media" id="modalMedia"></div>
+
+        <div class="modal-section-title">CONCEPT OVERVIEW</div>
+        <p id="modalSummary">Project summary description.</p>
+
+        <div class="modal-section-title">GAME DESIGN PILLARS &amp; ARCHITECTURE</div>
+        <div id="modalPillars"></div>
+
+        <div style="margin-top: 2rem; display: flex; justify-content: flex-end;">
+          <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary" id="modalPlayBtn">
+            <span>PLAY GAME</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Feedback -->
+  <div class="toast-notice" id="toastNotice">
+    System Message
+  </div>
+
+  <!-- Core Script -->
+  <script src="js/main.js"></script>
+</body>
+</html>
